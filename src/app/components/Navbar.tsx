@@ -78,66 +78,60 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             {isHome ? (
               <>
-                <Link
-                  to="/about"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  About
-                </Link>
+                {/* 👑 About ist auskommentiert 👑 */}
+                {/* <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-200">About</Link> */}
+                
                 <a
                   href="#projects"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   Projects
                 </a>
-                <Link
-                  to="/cv"
+                
+                {/* 👑 CV-Link mit jsDelivr für PDF-Vorschau in neuem Tab 👑 */}
+                <a
+                  href="https://cdn.jsdelivr.net/gh/Jasmin06HJ/Portfoliowebsite@main/public/CV26.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   CV
-                </Link>
+                </a>
               </>
             ) : (
               <>
-                <Link
-                  to="/about"
-                  className={`${linkColor} ${linkHoverColor} transition-colors duration-200`}
-                >
-                  About
-                </Link>
+                {/* 👑 About ist auskommentiert 👑 */}
+                {/* <Link to="/about" className={`${linkColor} ${linkHoverColor} transition-colors duration-200`}>About</Link> */}
+                
                 <Link
                   to="/#projects"
                   className={`${linkColor} ${linkHoverColor} transition-colors duration-200`}
                 >
                   Projects
                 </Link>
-                <Link
-                  to="/cv"
+                
+                {/* 👑 CV-Link mit jsDelivr für PDF-Vorschau in neuem Tab 👑 */}
+                <a
+                  href="https://cdn.jsdelivr.net/gh/Jasmin06HJ/Portfoliowebsite@main/public/CV26.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`${linkColor} ${linkHoverColor} transition-colors duration-200`}
                 >
                   CV
-                </Link>
+                </a>
               </>
             )}
           </div>
 
           {/* Contact Button */}
           <div>
-            {isHome ? (
-              <a
-                href="#contact"
-                className={`inline-flex items-center px-6 py-2.5 ${buttonBg} ${buttonTextColor} rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${buttonShadow}`}
-              >
-                Contact
-              </a>
-            ) : (
-              <Link
-                to="/#contact"
-                className={`inline-flex items-center px-6 py-2.5 ${buttonBg} ${buttonTextColor} rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${buttonShadow}`}
-              >
-                Contact
-              </Link>
-            )}
+            {/* 👑 Öffnet immer direkt dein Mailprogramm 👑 */}
+            <a
+              href="mailto:jasmine.heiden@gmail.com"
+              className={`inline-flex items-center px-6 py-2.5 ${buttonBg} ${buttonTextColor} rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${buttonShadow}`}
+            >
+              Contact
+            </a>
           </div>
         </div>
       </div>

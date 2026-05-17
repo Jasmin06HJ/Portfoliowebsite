@@ -7,6 +7,8 @@ import { PeacefullyPage } from './pages/PeacefullyPage';
 import { KoinoPage } from './pages/KoinoPage';
 import { AboutPage } from './pages/AboutPage';
 import { CVPage } from './pages/CVPage';
+import { ImprintPage } from './pages/ImprintPage';
+import { PrivacyPage } from './pages/PrivacyPage';
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
           <Route path="/projects/via" element={<ViaPage />} />
           <Route path="/projects/peacefully" element={<PeacefullyPage />} />
           <Route path="/projects/koino" element={<KoinoPage />} />
+          <Route path="/imprint" element={<ImprintPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

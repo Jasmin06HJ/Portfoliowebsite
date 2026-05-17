@@ -6,10 +6,14 @@ import applicationsImage1 from "../../imports/image-21.png";
 import applicationsImage2 from "../../imports/image-22.png";
 import newsEventsImage from "../../imports/image-25.png";
 import heroImage from "../../imports/image-26.png";
-import { ScreenPlaceholder } from '../components/ScreenPlaceholder';
-import { Link } from 'react-router';
+import { ScreenPlaceholder } from "../components/ScreenPlaceholder";
+import { Link } from "react-router";
+import { useEffect } from "react";
 
 export function YounitePage() {
+ useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
   return (
     <div className="min-h-screen">
       {/* Hero Section - Title and Info */}
@@ -265,61 +269,66 @@ export function YounitePage() {
 
           <div className="mb-12 space-y-4 text-gray-700 leading-relaxed">
             <p>
-              Our iterative prototyping and testing process allowed us to refine every aspect of the design. Through user feedback sessions, we could validate our assumptions and pivot where needed. Close collaboration with the youth council members gave us invaluable insights into real-world use cases.
+              Our iterative prototyping and testing process
+              allowed us to refine every aspect of the design.
+              Through user feedback sessions, we could validate
+              our assumptions and pivot where needed. Close
+              collaboration with the youth council members gave
+              us invaluable insights into real-world use cases.
             </p>
             <p>
-              To validate our design decisions, we created an early prototype based on the initial user research. We used a rapid iteration approach, refining the flows incrementally based on usability tests, such as an unguided test where a test subject used the app for sending surveys. These insights allowed us to identify pain points early, such as complex navigation, readability, and areas that needed additional guidance or contextual help.
+              To validate our design decisions, we created an
+              early prototype based on the initial user
+              research. We used a rapid iteration approach,
+              refining the flows incrementally based on
+              usability tests, such as an unguided test where a
+              test subject used the app for sending surveys.
+              These insights allowed us to identify pain points
+              early, such as complex navigation, readability,
+              and areas that needed additional guidance or
+              contextual help.
             </p>
             <p>
-              Each round of testing was followed by design adjustments to ensure the final product not only meets the needs of youth council members but also provides a seamless, intuitive experience that aligns with their workflows and expectations.
+              Each round of testing was followed by design
+              adjustments to ensure the final product not only
+              meets the needs of youth council members but also
+              provides a seamless, intuitive experience that
+              aligns with their workflows and expectations.
             </p>
           </div>
 
           {/* Prototype Screenshots - Custom Layout */}
           <div className="relative space-y-12">
             {/* Row 1: an undersized header */}
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="flex flex-col md:flex-row items-start gap-6">
               {/* Label */}
-              <h3 className="text-lg font-bold text-gray-800 md:w-48 flex-shrink-0">
+              <h3 className="text-lg font-bold text-gray-800 flex-shrink-0 md:w-48">
                 an undersized header
               </h3>
 
-              {/* Screen 1 */}
-              <ScreenPlaceholder />
-
-              {/* Arrow */}
-              <div className="flex items-center justify-center flex-shrink-0">
-                <svg className="w-12 h-12 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-
-              {/* Screen 2 */}
-              <ScreenPlaceholder />
+              {/* Image */}
+              <img
+                src="https://raw.githubusercontent.com/Jasmin06HJ/Portfoliowebsite/main/public/Younite-Testing1.png"
+                alt="Header illustration"
+                className="w-full max-w-2xl h-auto object-cover rounded-lg"
+              />
             </div>
 
             {/* Row 2: the AI capabilities */}
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="flex flex-col md:flex-row items-start gap-6">
               {/* Label */}
-              <h3 className="text-lg font-bold text-gray-800 md:w-48 flex-shrink-0">
-                the AI capabilities<br />for drafting applications
+              <h3 className="text-lg font-bold text-gray-800 flex-shrink-0 md:w-48">
+                the AI capabilities
+                <br />
+                for drafting applications
               </h3>
 
-              {/* Screen 3 */}
-              <ScreenPlaceholder />
-
-              {/* Arrow */}
-              <div className="flex items-center justify-center flex-shrink-0">
-                <svg className="w-12 h-12 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-
-              {/* Screen 4 */}
-              <ScreenPlaceholder />
-
-              {/* Screen 5 */}
-              <ScreenPlaceholder />
+              {/* Image */}
+              <img
+                src="https://raw.githubusercontent.com/Jasmin06HJ/Portfoliowebsite/main/public/Younite-Testing2.png"
+                alt="AI capabilities for drafting applications"
+                className="w-full max-w-3xl h-auto object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
@@ -333,16 +342,26 @@ export function YounitePage() {
           </h2>
 
           <p className="text-gray-300 mb-16 leading-relaxed max-w-4xl">
-            By directly addressing the usability hurdles uncovered during testing, we finalized a solution that truly empowers youth council members, defining a set of focused features tailored to their needs across the entire user journey.
+            By directly addressing the usability hurdles
+            uncovered during testing, we finalized a solution
+            that truly empowers youth council members, defining
+            a set of focused features tailored to their needs
+            across the entire user journey.
           </p>
 
           {/* 01 Onboarding */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
             {/* Left: Text */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">01 Onboarding</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                01 Onboarding
+              </h3>
               <p className="text-gray-300 leading-relaxed">
-                Users sign up with their official youth council email to ensure verification. Based on their interests, they receive personalized content and project recommendations and can choose to make their profile visible to connect with others.
+                Users sign up with their official youth council
+                email to ensure verification. Based on their
+                interests, they receive personalized content and
+                project recommendations and can choose to make
+                their profile visible to connect with others.
               </p>
             </div>
 
@@ -369,9 +388,14 @@ export function YounitePage() {
 
             {/* Right: Text */}
             <div className="order-1 lg:order-2">
-              <h3 className="text-2xl font-bold text-white mb-6">02 Surveys</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                02 Surveys
+              </h3>
               <p className="text-gray-300 leading-relaxed">
-                Even before you start your application, use AI to create surveys and discover what the people affected by your idea really think — so you can work on what really matters.
+                Even before you start your application, use AI
+                to create surveys and discover what the people
+                affected by your idea really think — so you can
+                work on what really matters.
               </p>
             </div>
           </div>
@@ -380,9 +404,13 @@ export function YounitePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
             {/* Left: Text */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">03 Home</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                03 Home
+              </h3>
               <p className="text-gray-300 leading-relaxed">
-                See the results of the survey, the latest news and your own projects directly on the homescreen.
+                See the results of the survey, the latest news
+                and your own projects directly on the
+                homescreen.
               </p>
             </div>
 
@@ -411,9 +439,14 @@ export function YounitePage() {
 
               {/* Right: Text */}
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">04 Applications</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  04 Applications
+                </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Write your own application effortlessly with the help of AI or by using a structured template. Tell me a real knowledge database to guide your draft.
+                  Write your own application effortlessly with
+                  the help of AI or by using a structured
+                  template. Tell me a real knowledge database to
+                  guide your draft.
                 </p>
               </div>
             </div>
@@ -431,7 +464,9 @@ export function YounitePage() {
               {/* Right: Text */}
               <div>
                 <p className="text-gray-300 leading-relaxed">
-                  Track its status, see who is responsible, and monitor the decision-making process in real time.
+                  Track its status, see who is responsible, and
+                  monitor the decision-making process in real
+                  time.
                 </p>
               </div>
             </div>
@@ -441,9 +476,13 @@ export function YounitePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-20">
             {/* Left: Text */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">04 News & Events</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                04 News & Events
+              </h3>
               <p className="text-gray-300 leading-relaxed">
-                Discover inspiring projects from other councils and highlight your own successes to strengthen motivation and self-efficacy.
+                Discover inspiring projects from other councils
+                and highlight your own successes to strengthen
+                motivation and self-efficacy.
               </p>
             </div>
 
@@ -454,7 +493,7 @@ export function YounitePage() {
                 alt="News and events showing projects from other councils"
                 className="w-full h-auto"
               />
-      </div>
+            </div>
           </div>
         </div>
       </section>
@@ -466,7 +505,9 @@ export function YounitePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#011B37] mb-4">
               Want to see more?
             </h2>
-            <p className="text-xl text-gray-600">Other projects</p>
+            <p className="text-xl text-gray-600">
+              Other projects
+            </p>
           </div>
 
           {/* Other Projects Grid */}
@@ -476,21 +517,20 @@ export function YounitePage() {
               to="/projects/via"
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                <svg
-                  className="w-16 h-16 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+              <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden">
+                <img
+                  src="https://raw.githubusercontent.com/Jasmin06HJ/Portfoliowebsite/main/public/via-hero.png"
+                  alt="Vía Hero Image"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-[#011B37] group-hover:text-[#6EB3FC] transition-colors">
                   Vía
                 </h3>
-                <p className="text-gray-600 mt-2">Travel and navigation platform</p>
+                <p className="text-gray-600 mt-2">
+                  Travel and navigation platform
+                </p>
               </div>
             </Link>
 
@@ -499,21 +539,20 @@ export function YounitePage() {
               to="/projects/peacefully"
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                <svg
-                  className="w-16 h-16 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
+            <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden">
+  <img
+    src="https://raw.githubusercontent.com/Jasmin06HJ/Portfoliowebsite/main/public/Peacefully-Zwischenbild2.png"
+    alt="Vía Hero Image"
+    className="w-full h-full object-cover"
+  />
+</div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-[#011B37] group-hover:text-[#6EB3FC] transition-colors">
                   Peacefully
                 </h3>
-                <p className="text-gray-600 mt-2">Mindfulness and wellness app</p>
+                <p className="text-gray-600 mt-2">
+                  Mindfulness and wellness app
+                </p>
               </div>
             </Link>
 
@@ -523,20 +562,19 @@ export function YounitePage() {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                <svg
-                  className="w-16 h-16 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
+                <img
+    src="https://raw.githubusercontent.com/Jasmin06HJ/Portfoliowebsite/main/public/Konio-Hero-klein.png"
+    alt="Vía Hero Image"
+    className="w-full h-full object-cover"
+  />
+</div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-[#011B37] group-hover:text-[#6EB3FC] transition-colors">
                   Koino
                 </h3>
-                <p className="text-gray-600 mt-2">Community platform</p>
+                <p className="text-gray-600 mt-2">
+                  Community platform
+                </p>
               </div>
             </Link>
           </div>
@@ -544,7 +582,7 @@ export function YounitePage() {
           {/* Back to all projects link */}
           <div className="mt-12 text-center">
             <Link
-              to="/"
+              to="/#projects"
               className="inline-flex items-center gap-2 text-[#6EB3FC] hover:text-[#011B37] transition-colors duration-300 font-medium"
             >
               <svg
@@ -570,21 +608,24 @@ export function YounitePage() {
       <footer className="relative py-32 overflow-hidden bg-[#011B37]">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
           <div className="max-w-2xl">
-            {/* Logo/Icon Placeholder */}
-            <div className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center mb-8">
-              <span className="text-white text-xl font-bold">JH</span>
-            </div>
+              <img 
+    src="https://raw.githubusercontent.com/Jasmin06HJ/Portfoliowebsite/main/public/Profilbild-Kasten.png" 
+    alt="Jasmin" 
+    /* mb-4 sorgt für den sehr geringen Abstand zur Überschrift darunter */
+    className="w-20 h-16 md:w-24 md:h-20 lg:w-32 lg:h-24 object-contain rounded-lg mb-4" 
+  />
 
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-              Got a complex Problem?<br />
+              Got a complex Problem?
+              <br />
               Let's solve it!
             </h2>
 
             {/* CTA Button */}
             <div className="mb-16">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:jasmine.heiden@gmail.com"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#6EB3FC] text-white rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl group"
               >
                 Get in touch
@@ -594,27 +635,31 @@ export function YounitePage() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
                 </svg>
               </a>
             </div>
 
-            {/* Bottom Row */}
+{/* Bottom Row */}
             <div className="flex items-center justify-between text-sm text-gray-400">
               <div className="flex items-center gap-6">
-                <a href="#" className="hover:text-white transition-colors duration-200">
-                  Follow us on 𝕏
-                </a>
-                <span className="text-gray-600">or</span>
-                <a href="mailto:hello@example.com" className="hover:text-white transition-colors duration-200">
-                  get in touch on ✉️
-                </a>
+                {/* 👑 HIER GEÄNDERT: Helle Hover-Effekte für dunkle Hintergründe 👑 */}
+                <Link to="/imprint" className="hover:text-white transition-colors duration-200">
+                  Imprint
+                </Link>
+                <span className="text-gray-600">|</span>
+                <Link to="/privacy" className="hover:text-white transition-colors duration-200">
+                  Privacy
+                </Link>
               </div>
 
               <div className="hidden md:block">
-                <span>©2025 Small Studio</span>
-                <span className="mx-4 text-gray-600">•</span>
-                <span>Monday, 5/12/2026</span>
+                <span>©2026 Jasmin Heiden</span>
               </div>
             </div>
           </div>

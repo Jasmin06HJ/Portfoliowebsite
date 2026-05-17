@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 export function Footer() {
   return (
     <footer id="contact" className="relative py-32 overflow-hidden">
@@ -6,10 +8,12 @@ export function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         <div className="max-w-2xl">
-          {/* Logo/Icon Placeholder */}
-          <div className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center mb-8">
-            <span className="text-white text-xl font-bold">JH</span>
-          </div>
+          <img 
+            src="https://raw.githubusercontent.com/Jasmin06HJ/Portfoliowebsite/main/public/Profilbild-Kasten.png" 
+            alt="Jasmin" 
+            /* mb-4 sorgt für den sehr geringen Abstand zur Überschrift darunter */
+            className="w-20 h-16 md:w-24 md:h-20 lg:w-32 lg:h-24 object-contain rounded-lg mb-4" 
+          />
 
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
@@ -20,7 +24,7 @@ export function Footer() {
           {/* CTA Button */}
           <div className="mb-16">
             <a
-              href="mailto:hello@example.com"
+              href="mailto:jasmine.heiden@gmail.com"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#101722] rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl group"
             >
               Get in touch
@@ -38,23 +42,24 @@ export function Footer() {
           {/* Bottom Row */}
           <div className="flex items-center justify-between text-sm text-gray-400">
             <div className="flex items-center gap-6">
-              <a href="#" className="hover:text-white transition-colors duration-200">
-                Follow us on 𝕏
-              </a>
-              <span className="text-gray-600">or</span>
-              <a href="mailto:hello@example.com" className="hover:text-white transition-colors duration-200">
-                get in touch on ✉️
-              </a>
+              {/* 👑 HIER GEÄNDERT: Link-Komponenten statt a-Tags 👑 */}
+              <Link to="/imprint" className="hover:text-white transition-colors duration-200">
+                Imprint
+              </Link>
+              <span className="text-gray-600">|</span>
+              {/* Privacy bereiten wir hier schon mal vor */}
+              <Link to="/privacy" className="hover:text-white transition-colors duration-200">
+                Privacy
+              </Link>
             </div>
 
             <div className="hidden md:block">
-              <span>©2025 Small Studio</span>
-              <span className="mx-4 text-gray-600">•</span>
-              <span>Monday, 5/11/2026</span>
+              <span>©2026 Jasmin Heiden</span>
             </div>
           </div>
-        </div>
-      </div>
+
+        </div> {/* 👑 DIESES DIV FEHLTE: Schließt max-w-2xl 👑 */}
+      </div> {/* 👑 DIESES DIV FEHLTE: Schließt max-w-7xl 👑 */}
     </footer>
-  );
-}
+    );
+ }
